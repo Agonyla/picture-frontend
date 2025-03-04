@@ -8,14 +8,6 @@ export const useLoginUserStore = defineStore('loginUser', () => {
   })
 
   async function fetchLoginUser() {
-    // todo: 由于后端接口未实现，暂时注释
-    // setTimeout(() => {
-    //   setLoginUser({
-    //     userName: '张三',
-    //     id: 1,
-    //   })
-    // }, 3000)
-
     const res = await getLoginUserUsingGet()
     // console.log(res)
     if (res.data.code === 0 && res.data.data) {
